@@ -2,6 +2,7 @@ package com.example;
 
 /**
  * Outer class. All fields required when creating a new object.
+ * No setters make the object immutable.
  */
 public class Employee {
 
@@ -16,6 +17,8 @@ public class Employee {
         this.birthYear = birthYear;
         this.shoeSize = shoeSize;
     }
+
+    // Add getters here if you want
 
     @Override
     public String toString() {
