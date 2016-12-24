@@ -17,22 +17,6 @@ public class Employee {
         this.shoeSize = shoeSize;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public Integer getBirthYear() {
-        return birthYear;
-    }
-
-    public Integer getShoeSize() {
-        return shoeSize;
-    }
-
     @Override
     public String toString() {
         return "Employee{" +
@@ -45,6 +29,7 @@ public class Employee {
 
     /**
      * Inner class. Static so we do not have to create a new object of EmployeeBuilder when creating a new Employee.
+     * All methods return the EmployeeBuilder with any previously set values.
      *
      * @see Employee
      */
@@ -54,6 +39,11 @@ public class Employee {
         private String lastName;
         private Integer birthYear;
         private Integer shoeSize;
+
+        // Make firstName mandatory
+        public EmployeeBuilder(String firstName) {
+            this.firstName = firstName;
+        }
 
         public EmployeeBuilder firstName(String firstName) {
             this.firstName = firstName;
