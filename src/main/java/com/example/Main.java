@@ -8,7 +8,7 @@ public class Main {
         Employee employeeA = new Employee("Kalle", "Kula", 1983, 45);
 
         // Creating a Employee object with the help of the builder.
-        // Much easier to read for other developers.
+        // Readability for other developers.
         // Note: firstName is mandatory.
         Employee employeeB = new Employee.EmployeeBuilder("Kalle")
                 .lastName("Kula")

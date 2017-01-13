@@ -18,7 +18,27 @@ public class Employee {
         this.shoeSize = shoeSize;
     }
 
-    // Add getters here if you want
+    public String getLastName() {
+        return lastName;
+    }
+
+    public Integer getBirthYear() {
+        return birthYear;
+    }
+
+    public Integer getShoeSize() {
+        return shoeSize;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
+
+    // No setters make the object immutable
 
     @Override
     public String toString() {
